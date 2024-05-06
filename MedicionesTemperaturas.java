@@ -82,9 +82,11 @@ public class MedicionesTemperaturas
     public int medicionesIguales()
     {
         int iguales= 0;
-        for(Float temp: mediciones)
+        for(int i=0 ; i< mediciones.size()-1; i++)
         {
-            if(temp.equals(promedioTemperaturas()))
+        Float t1=mediciones.get(i);
+        Float t2=mediciones.get(i+1);
+            if(t1.equals(t2))
                 {
                 iguales=iguales+1;
                 }
